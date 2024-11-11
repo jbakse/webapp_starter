@@ -9,6 +9,8 @@ course.
 
 **.vscode** configuration files for VS Code
 
+**public** HTML/CSS/JS/image front end files
+
 **src** JavaScript source files
 
 **src/shared** JS+OAI shared library code
@@ -17,7 +19,21 @@ course.
 
 **.gitignore** tells git which files to ignore
 
+**deno.json** task for running the app
+
+**deno.lock** maintained by deno
+
+**devbox.json** ignore this
+
+**devbox.lock** ignore this
+
+**main.js** your main backend file, entry point for depoloyment
+
 **README.md** this file, info about the repo
+
+Also, you should create:
+
+**.env** copy from .env-template, add your API Key
 
 ## Running
 
