@@ -15,7 +15,11 @@ import * as log from "./src/shared/logger.ts";
 log.setLogLevel(log.LogLevel.DEBUG);
 
 log.info("Starting webapp_starter");
-log.info(`cwd: ${Deno.cwd()}`);
+console.log(`cwd: ${Deno.cwd()}`);
+console.log('cwd contains:');
+for await (const dirEntry of Deno.readDir('.')) {
+  console.log(dirEntry.name);
+}
 
 // Create an instance of the Application and Router classes
 const app = new Application();

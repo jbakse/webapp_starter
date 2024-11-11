@@ -7,7 +7,8 @@ import { type Next } from "https://deno.land/x/oak@14.2.0/middleware.ts";
 export async function staticServer(context: Context, next: Next) {
   try {
     log.debug(`Serving static file: ${context.request.url.pathname}`);
-    log.debug(`Serveing from: ${Deno.cwd()}/public`);
+    log.debug(`Serving from: ${Deno.cwd()}/public`);
+
     await context.send({
       root: `${Deno.cwd()}/public`,
       index: "index.html",
