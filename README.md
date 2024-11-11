@@ -77,15 +77,22 @@ Then, set up the deploy on deno deploy.
 2. New Project
 3. Select your organiztion, repo, branch
 4. Thoughtfully name the project
+   Your name will be the subdomain of the deployment.
 5. Set the install and build steps (if needed*)
 6. Set root directory (if needed*)
 7. Set the include and exclude files (if needed*)
 8. Set entrypoint
+9. Deploy Project
 
-Its not going to work yet! You need to set the API key!
+Its not going to work yet! It might work a little.
+It might not work at all. It might even fail to deploy.
+
+You need to set the API key!
 
 1. Go to project settings.
 2. Add an evironment variable: `OPENAI_API_KEY=yourkey`
+   Make sure the variables name and value are EXACTLY correct!
+   Don't include an extra return or newline.
 
 *for a simple project/repo, you won't need to set these
 

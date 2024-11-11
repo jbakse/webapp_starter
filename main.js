@@ -8,7 +8,7 @@ import { Application, Router } from "https://deno.land/x/oak@v12.6.1/mod.ts";
 import { createExitSignal, staticServer } from "./src/shared/server.ts";
 
 // Import the promptGPT function from the class library
-import { initOpenAI, promptGPT } from "./src/shared/openai.ts";
+import { promptGPT } from "./src/shared/openai.ts";
 
 // tell the shared library code to log as much as possible
 import * as log from "./src/shared/logger.ts";
@@ -16,7 +16,6 @@ log.setLogLevel(log.LogLevel.DEBUG);
 
 log.info("Starting webapp_starter");
 log.info(`cwd: ${Deno.cwd()}`);
-// initOpenAI();
 
 // Create an instance of the Application and Router classes
 const app = new Application();
