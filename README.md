@@ -78,7 +78,8 @@ kill -9 $(lsof -t -i:8000)
 
 [Deno Deploy](https://deno.com/deploy) is a hosting service from Deno.
 
-Deno Deploy can be connected to a github repository and automatically deploy changes to your repo when you push.
+Deno Deploy can be connected to a github repository and automatically deploy
+changes to your repo when you push.
 
 First, get your project on github.
 
@@ -92,25 +93,32 @@ Then, set up the deploy on deno deploy.
 1. Log in to https://deno.com/deploy
 2. New Project
 3. Select your organiztion, repo, branch
-4. Thoughtfully name the project
-   Your name will be the subdomain of the deployment.
+4. Thoughtfully name the project Your name will be the subdomain of the
+   deployment
 5. Set the install and build steps (if needed*)
 6. Set root directory (if needed*)
 7. Set the include and exclude files (if needed*)
-8. Set entrypoint
+8. Set entrypoint to you main backend js file
 9. Deploy Project
 
-Its not going to work yet! It might work a little.
-It might not work at all. It might even fail to deploy.
+*for a simple project/repo, you won't need to set these
+
+
+Its not going to work yet! It might work a little. It might not work at all. It
+might even fail to deploy.
 
 You need to set the API key!
 
-1. Go to project settings.
-2. Add an evironment variable: `OPENAI_API_KEY=yourkey`
-   Make sure the variables name and value are EXACTLY correct!
-   Don't include an extra return or newline.
+1. Log in to https://deno.com/deploy
+2. Go to project's settings.
+3. Add an evironment variable: `OPENAI_API_KEY=yourkey` Make sure the variables
+   name and value are EXACTLY correct! Don't include an extra return or newline.
 
-*for a simple project/repo, you won't need to set these
+Note: when working locally your api key is in `.env` but `.env` isn't tracked in
+your repo. Thats why you need to set the evironment variable on the deno deploy
+dashboard.
+
+
 
 ```bash
 /Users/jbakse/.deno/bin/deployctl -v

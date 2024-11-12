@@ -5,17 +5,16 @@
 import { Application, Router } from "https://deno.land/x/oak@v12.6.1/mod.ts";
 
 // Import server helper functions from the class library
-import { createExitSignal, staticServer } from "./src/shared/server.ts";
+import { createExitSignal, staticServer } from "./shared/server.ts";
 
 // Import the promptGPT function from the class library
-import { promptGPT } from "./src/shared/openai.ts";
+import { promptGPT } from "./shared/openai.ts";
 
-// tell the shared library code to log as much as possible
-import * as log from "./src/shared/logger.ts";
+import * as log from "./shared/logger.ts";
+
+// tell the shared library code to log everything
 log.setLogLevel(log.LogLevel.DEBUG);
-
 log.info("Starting webapp_starter");
-
 
 // Create an instance of the Application and Router classes
 const app = new Application();
